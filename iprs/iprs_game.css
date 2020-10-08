@@ -1,0 +1,12 @@
+#center {text-align: center;}
+#image {margin-left: auto; margin-right: auto; display: block; text-align: center;}
+#paper1 { width : 140px; height :150px; padding : 5px; margin : 5px; border : 3px solid; margin-left: 15.3%; margin-right: auto; float: left ;}
+#paper2 { width : 140px; height :150px; padding : 5px; margin : 5px; border : 3px solid; margin-left: 15.3%; margin-right: auto; float: left ;}
+#paper3 { width : 140px; height :150px; padding : 5px; margin : 5px; border : 3px solid; margin-left: 15.3%; margin-right: auto; float: left ;}
+
+body h3 {text-align: center}
+body h4 {margin-left:120px;}
+p {margin-left:150px; margin-right: 150px}
+table {margin-left:auto;margin-right:auto;}
+article ul {margin-left:150px; margin-right: 150px}
+article ol {margin-left:150px; margin-right: 150px}

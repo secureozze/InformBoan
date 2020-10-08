@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+<head>
+
+	<title>랜섬웨어</title>
+
+	<link rel="stylesheet" type="text/css" href="common.css"/>
+	<link rel="stylesheet" type="text/css" href="ransomware.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <style type ="Text/css">
+	body {font-family: 'Nanum Myeongjo', serif;
+font-family: 'Do Hyeon', sans-serif;}
+</style>
+
+</head>
+
+
+<BODY>
+
+<header>
+ 	<div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="../apt/main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="../apt/main_APT.html">APT</a></li>
+                        <li><a href="./main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="../pharming/main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="../jungtongbup/jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="../jungtongbup/jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="../iprs/iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+
+
+
+<article class="content">
+
+<H3>랜섬웨어(Ransomware)란</H3>
+<P>‘몸값’(Ransom)과 ‘소프트웨어’(Software)의 합성어로, 시스템을 잠그거나 데이터를 암호화해 사용할 수 없도록 만든 뒤 이를 인질로 금전을 요구하는 악성 프로그램을 일컫는다.<br/>
+랜섬웨어는 2005년부터 본격적으로 알려지기 시작해, 2013년 들어 전 세계적으로 급증하고 있다. 랜섬웨어 공격을 받은 공공기관, 기업, 개인 PC 등이 매년 늘어나는 추세다.</P><br/><br/>
+
+
+
+
+
+<H3>감염경로</H3>
+<p>주로 이메일, 웹사이트, P2P 사이트 등을 통해 퍼진다. 사용자 눈에 띄는 게 아니라 파일 또는 오피스 문서파일에 숨어 빈틈을 노린다. 최근 랜섬웨어는 영역을 확장해 PC뿐만 아니라 안드로이드 스마트폰 데이터까지 위협하고 있다.</p><br/>
+
+<ul>
+	<li class="bold">- 웹사이트</li>
+	<img id="image" src="https://ncc-phinf.pstatic.net/20170228_231/14882597505206DbWp_PNG/06.png?type=w646" width="500px" alt="웹사이트 광고 업데이트 서버에 악성코드가 침투해 랜섬웨어를 유포한 사례"></img>
+	<p>특히 ‘신뢰할 수 없는 사이트’를 통해 랜섬웨어가 퍼지는 경우가 많다. 이 경우 단순히 홈페이지를 방문만 해도 랜섬웨어에 감염된다. 일명 *‘드라이브 바이 다운로드(Drive by Download)’ 기법을 이용해서다.</p>
+	<p id="footnote">
+	* 공격자가 해당 웹사이트에서 보안이 취약한 점을 노려 악성코드를 숨기고, 이 악성코드를 사용자가 자신도 모르게 내려받아 실행해 감염되는 방식</p><br/>
+
+	<li class="bold">- 이메일</li>
+	<img id="image" src="https://ncc-phinf.pstatic.net/20170228_163/1488259815002Ezwap_PNG/07.png?type=w646" width="500px" alt="이메일에 요금 청구서를 사칭하여 악성코드 첨부한 사례"></img>
+	<p>출처가 불분명한 이메일, 첨부파일, 메일 웹주소(URL)를 통해 사용자 PC를 감염시키기도 한다. 사용자가 이메일을 열어보도록 유도하기 위해 마치 아는 사람인 것처럼, 알아야 하는 정보인 것처럼 제목을 달아 속이기도 한다.</p><br/>
+
+	<li class="bold">- P2P 사이트</li>
+	<p>랜섬웨어 바이러스가 감염된 동영상등의 파일을 공유하여 유포한다.</p><br/>
+
+	<li class="bold">- SNS</li>
+	<p>해당 SNS 페이지에 올라온 단축 URL이나 사진을 통해 랜섬웨어를 유포한다.</p>
+</ul><br/><br/>
+
+
+
+
+
+<H3>랜섬웨어 종류</H3><br/>
+
+<ul>
+	<li class="bold">- 크립토락커</li>
+	<img id="image" src="https://ncc-phinf.pstatic.net/20170228_147/148824359044486V5o_PNG/04.png?type=w646" width="500px" alt="크립토락커에 감염된 모습"></img>
+	<p>자동실행 등록 이름이 ‘크립토락커’로 돼 있는 것이 특징이다.<br/>
+	웹사이트 방문 시 취약점을 통해 감염되거나, 이메일 내 첨부파일을 통해 주로 감염된다. 일단 크립토락커에 감염되면 사용자 PC 데이터 확장자를 ‘encrypted’ 또는 ‘ccc’로 변경하는 식으로 파일을 암호화한다. 그런 다음 암호화된 파일이 든 모든 폴더 안에 복호화 안내 파일 2종류를 생성한다. ‘윈도 볼륨 섀도우(Windows Volume Shadow)’를 삭제하기 때문에 윈도 시스템 복구가 불가능하다.
+	</p><br/>
+
+	<li class="bold">- 테슬라크립트</li>
+	<p>지난 2015년 국내에 많이 유포된 랜섬웨어 종류로, 취약한 웹페이지 접속 및 이메일 내 첨부파일 등을 통해 퍼진다.<br/>
+		파일 확장자를 ‘ecc’, ‘micr’ 등으로 변경하며, 고정식 드라이브(DRIVE_FIXED)만을 감염 대상으로 지정한다. USB 메모리 같은 이동식 드라이브나 네트워크 드라이브는 감염되지 않는점이 특징이다.<br/>
+	</p><br/>
+
+	<li class="bold">- 록키</li>
+	<p>2016년 3월 이후 이메일을 통해 퍼진 랜섬웨어다.<br/>
+		수신인을 속이기 위해 ‘Invoice’, ‘Refund’ 등의 제목을 사용한다. 자바스크립트 파일이 들어 있는 압축파일을 첨부하고, 이용자가 이를 실행하면 해당 시스템이 감염된다. 일단 감염되면 파일들이 암호화되고 확장자가 ‘locky’로 변한다. 바탕화면에 텍스트 파일로 복구 관련 메시지가 뜨는 것이 특징이다.
+	</p><br/>
+
+	<li class="bold">- 크립트XXX</li>
+	<img id="image" src="https://ncc-phinf.pstatic.net/20170228_43/1488259666691It3Xp_PNG/05.png?type=w646" width="500px" alt="크립트XXX에 시스템이 감염된 모습"></img>
+	<p>2016년 5월 국내에 등장했다.<br/>일단 감염되면 파일 확장자가 ‘crypt’ 등으로 변하며 바탕화면에 복구 안내 메시지가 뜬다. 그러면서 ‘데이터를 잃기 싫으면, 비트코인으로 대가를 지불하라’는 메시지가 뜬다.</p><br/>
+
+	<li class="bold">- 케르베르</li>
+	<p>말하는 랜섬웨어이다.<br/>
+	이 랜섬웨어에 감염되면 “Attention! At-tention! Attention!? Your documents, photos, databases and other important files have been encrypted”(“이봐! 이보라고!? 당신 문서, 사진, 데이터베이스와 중요한 파일들이 암호화됐어”)라는 음성 메시지가 나온다. 웹사이트 방문 시 취약점을 통해 감염되며, 감염되면 파일을 암호화 하고 확장자를 ‘cerber’로 변경한다.
+	</p>
+</ul><br/><br/>
+
+
+
+<h3>피해예방을 위한 수칙</h3>
+<ul>
+	<li>출처가 불문명한 이메일 또는 첨부파일은 실행하지 말것</li>
+	<li>신뢰할 수 있는 백신 프로그램 설치 및 최신 버전 유지</li>
+	<li>윈도우 등 OS 및 사용중인 프로그램은 최신 버전으로 업데이트</li>
+	<li>중요자료는 별도 저장장치에 정기적으로 백업</li>
+</ul><br/><br/>
+
+<strong id="button_right">&nbsp; <- 다 읽었으면 &nbsp;</strong>
+<button id="button_right" onclick="location.href='ransomware_game1.html'">&nbsp;게임하기&nbsp;</button><br/><br/>
+
+ </article>
+
+
+
+  <footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+
+
+</BODY>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>APT GAME2</title>
+
+    <link rel="stylesheet" type="text/css" href="common.css"/>
+    <link rel="stylesheet" type="text/css" href="APT_game.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <style type="text/css">
+      article {height: 82vh}
+    body {font-family: 'Nanum Myeongjo', serif;
+font-family: 'Do Hyeon', sans-serif;}
+    </style>
+    
+    </style>
+</head>
+
+
+
+<body>
+
+
+    <header>
+    <div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="./main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="./main_APT.html">APT</a></li>
+                        <li><a href="../ransomware/main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="../pharming/main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="../jungtongbup/jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="../jungtongbup/jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="../iprs/iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+<article class="content">
+<h3>첨부된 한글파일을 열어서 확인해보니...<br/> 내가 유사수신행위법을 위반하여 조사대상이 되었다는 것이다!</h3><br/>
+<br/><script type="text/javascript">
+
+	function show_message() {
+		document.write("그러던 순간...!!");
+	}
+
+	
+    function Show_Bimg() {
+
+    Bimg = Array();
+
+    for(i=0; i<3; i++) {
+
+        Bimg[i] = "images/APT6.gif"
+
+
+    }
+    
+    time = new Date();
+
+    set= time.getSeconds();
+
+    index = set%3;
+
+    document.write("<map id='imgmap201952818511' name='imgmap201952818511'><area shape='rect' alt='' title='' coords='1246,688,1564,727' href='./APT_question.html' target='' /></map> <img usemap= '#imgmap201952818511' src = '" + Bimg[index] +"'>");
+    }
+
+
+
+    function show_alert() {
+        alert("컴퓨터가 APT공격으로 악성코드에 감염되었습니다.                       다음으로 넘어가고 싶다면 Next버튼을 눌러주세요");
+    
+    }
+
+    
+
+
+    setTimeout(show_message, 4000);
+    setTimeout("Show_Bimg()", 5000);
+    setTimeout(show_alert, 6000);
+
+
+</script>
+
+
+<img src="images/APT5.jpg" alt="금융감독원 유사수신행위 위반통보로 위장한 문서화면" style="margin-left: auto; margin-right: auto; display: block;">
+
+<br/>
+<br/>
+<button id="button_left" onclick="location.href='APT_game2.html'">&nbsp;이전으로&nbsp;</button>
+
+</article>
+
+
+
+
+
+<footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+</body>
+</html>

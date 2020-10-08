@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+	<title>파밍 GAME</title>
+
+	<link rel="stylesheet" type="text/css" href="common.css"/>
+	<link rel="stylesheet" type="text/css" href="pharming_game.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+<style type ="Text/css">
+  body {font-family: 'Nanum Myeongjo', serif;
+font-family: 'Do Hyeon', sans-serif;}
+  .content{height:80vh;}
+</style>
+
+
+</head>
+
+
+
+
+
+<BODY>
+<header>
+ 	<div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="../apt/main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="../apt/main_APT.html">APT</a></li>
+                        <li><a href="../ransomware/main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="./main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="../jungtongbup/jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="../jungtongbup/jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="../iprs/iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+<article class="content">
+<h3>평소처럼 은행 사이트에 접속했는데<br>
+개인정보유출 방지를 위해 내 개인정보를 입력하라는 모순적인 창이 떴다.<br>
+이 상황에서 나는 어떻게 할 것인가?</h3><br/>
+
+
+<p>팝업창 내용을 입력할 경우 '다음단계' 클릭<br>
+	팝업창 내용을 입력하지 않을 경우 'X' 클릭</p><br>
+
+
+<img src="images/popup.PNG" width="600px" alt="팝업창" style="margin-left: auto; margin-right: auto; display: block;" usemap="#popup" alt="popup"> 
+<map name="popup"> 
+  <area shape="rect" id="right" coords="565,6,579,18" href="consequence1.html">
+  <area shape="rect" id="wrong" coords="411,243,529,261" href="consequence2.html">
+</map>
+<br/>
+<br/>
+
+
+  <script type="text/javascript">
+    function result(){
+      if(document.popup.right==true){
+        alert("정답입니다!\n다음 문제도 풀어보세요!");
+      }
+      else{
+        alert("다시 풀어보세요");
+        location.href="personalbup_game09.html";
+      }
+    }
+
+  </script>
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+	<button id="button_left" onclick="location.href='pharming_game1.html'">&nbsp;이전으로&nbsp;</button>
+
+</article>
+
+
+<footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+
+</BODY>
+</html>

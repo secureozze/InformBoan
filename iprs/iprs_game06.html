@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 저작권법 GAME </title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" type="text/css" href="common.css"/>
+<link rel="stylesheet" type="text/css" href="iprs_game.css"/>
+<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+<style type ="Text/css">
+body {font-family: 'Nanum Myeongjo', serif;
+font-family: 'Do Hyeon', sans-serif;}
+</style>
+</head>
+
+<body>
+    <header>
+  <div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="../apt/main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="../apt/main_APT.html">APT</a></li>
+                        <li><a href="../ransomware/main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="../pharming/main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="../jungtongbup/jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="../jungtongbup/jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="./iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<article class="content" style="height: 80vh" onmousemove="move();">
+<h3>이때 당신은 저작재산권 중 무엇을 침해했을까요?<br/>경찰뱃지를 네모안으로 넣으세요!</h3>
+
+    <br/><br/>
+
+    <img id="img1" src="images/police_badge.png" width="130px"
+        style="position: absolute; left: 700px; top: 160px;" />
+
+    <form>
+        마우스로 이미지를 클릭하면 움직이기 시작합니다.<br>
+        다시 클릭하면 움직임이 멈춤니다.<br><br>
+    </form>
+        <form style="visibility: hidden">        Mouse Position:
+        (X, Y)=(<input id="x"  size="3" type="text"/>,
+        <input id="y"  size="3" type="text"/>)
+    </form>
+
+    <br/><br/><br/>
+
+    <div id="paper1">
+        <img id = "1" src = "images/choice1.png" width="140" hspace = 20 draggable="true">
+    </div>
+        <div id="paper2">
+        <img id = "2" src = "images/choice2.png" width="140" hspace = 20 draggable="true">
+    </div>
+        <div id="paper3">
+        <img id = "3" src = "images/choice3.png" width="140" hspace = 20 draggable="true"> 
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <button id="button_left" onclick="location.href='iprs_game05.html'">&nbsp;이전으로&nbsp;</button>
+    <br/><br/><br/>
+</article>
+
+        <footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+    <script type="text/javascript">
+        var stopped = true;
+        document.getElementById("img1").onclick = start_stop_move;
+
+        var divEl = $("#paper1");
+                            
+        var divX1 = divEl.offset().left;
+        var divY1 = divEl.offset().top;
+
+        var divE2 = $("#paper2");
+                            
+        var divX2 = divE2.offset().left;
+        var divY2 = divE2.offset().top;
+
+        var divE3 = $("#paper3");
+                            
+        var divX3 = divE3.offset().left;
+        var divY3 = divE3.offset().top;
+
+        function start_stop_move() {
+            if (stopped) stopped = false;
+            else stopped = true;
+
+
+            if((mouse_x>=divX1 && mouse_x<=divX1+160)&&(mouse_y>=divY1 &&mouse_y<=divY1+155)){
+                alert("정답입니다!");
+                alert("축하합니다!\n당신은 성신여자대학교 융합보안공학과 입학 자격을 얻었습니다♥\n수정이로 만나요♥");
+            }
+            if((mouse_x>=divX2 && mouse_x<=divX2+160)&&(mouse_y>=divY2 &&mouse_y<=divY2+155)){
+                alert("다시 풀어보세요");
+                location.href="iprs_game06.html";
+            }
+            if((mouse_x>=divX3 && mouse_x<=divX3+160)&&(mouse_y>=divY3 &&mouse_y<=divY3+155)){
+                alert("다시 풀어보세요");
+                location.href="iprs_game06.html";
+            }
+
+                document.getElementById("paper1").style.left = x1;
+                document.getElementById("paper1").style.top = y1;
+        }
+
+        function move() {
+            e = window.event;
+            mouse_x = e.clientX;
+            mouse_y = e.clientY;
+
+            document.getElementById("x").value = mouse_x;
+            document.getElementById("y").value = mouse_y;
+
+            if (!stopped) {
+                document.getElementById("img1").style.left = (mouse_x-50) + "px";
+                document.getElementById("img1").style.top = (mouse_y-50) + "px";
+            }
+
+        }
+    </script>
+</body>
+</html>

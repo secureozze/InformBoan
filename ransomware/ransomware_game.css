@@ -1,0 +1,13 @@
+.image2 {margin-left: 28%; margin-top: 1%}
+.center {text-align: center}
+
+body h3 {text-align: center}
+body h4 {margin-left:120px;}
+p {margin-left:150px; margin-right: 150px}
+table {margin-left:auto;margin-right:auto;}
+article	ul {margin-left:150px; margin-right: 150px}
+article li {line-height: 35px;}
+#image {margin-left: auto; margin-right: auto; display: block; text-align: center;}
+
+.bold {font-weight:bold;}
+#footnote {font-size:8pt;}

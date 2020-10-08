@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>랜섬웨어 GAME</title>
+
+	<link rel="stylesheet" type="text/css" href="common.css"/>
+
+    <link rel="stylesheet" type="text/css" href="ransomware_game.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+	<style type ="Text/css">
+		#email {z-index:1; position: absolute; top:270px; left:30px;}
+		#adress {z-index:2; position: absolute; top:285px; left:245px;}
+		#file {z-index:2; position: absolute; top:342px; left:110px;}
+
+		#button_left {float: left; bottom:120px;}
+    	#button_right {float: right;}
+        body {font-family: 'Nanum Myeongjo', serif;
+font-family: 'Do Hyeon', sans-serif; font-size:12pt ;}
+
+	</style>
+
+</head>
+
+<body>
+
+<header>
+ 	  <div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="../apt/main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="../apt/main_APT.html">APT</a></li>
+                        <li><a href="./main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="../pharming/main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="../jungtongbup/jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="../jungtongbup/jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="../iprs/iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+<article class="content">
+<h3>메일을 확인해보니 내가 온라인 명예훼손으로 고소되었다고 한다.<br>
+난 악플같은것도 달아본 적이 없는데···<br>
+정말로 고소당한 것일까? 아니면 혹시 유행한다는 랜섬웨어일지도?</h3><br/>
+
+<img class="image2" id = "email" src="images/e-mail.png" alt="메일내용">
+<img class="image2" id = "adress" src="images/adress.png" name="img01" onclick="ChangeImage01()">
+<img class="image2" id = "file" src="images/attached file.png" name="img02" onclick="ChangeImage02()">
+
+<p class="center">랜섬웨어의 단서 <strong>2개를 모두</strong> 찾아 클릭해보세요.</p>
+<div class="center" id="ViewTimer"></div>
+
+<div class="center" id="CorrectCnt"></div> <br/>
+
+<script type="text/javascript">
+
+    var cnt = 0;
+    
+    msg_Correct();
+
+    var state01 = 0;
+    function ChangeImage01(){
+        if (state01==0){
+            document.img01.src = "images/adress_explanation.png"
+            state01=1;
+            cnt++;
+        }
+        else{
+            document.img01.src = "images/adress.png"
+            state01=0;
+            cnt--;
+        }
+        msg_Correct();        
+    }
+
+    var state02 = 0;
+    function ChangeImage02(){
+        if (state02==0){
+            document.img02.src = "images/attach_explanation.png"
+            state02=1;
+            cnt++;
+        }
+        else{
+            document.img02.src = "images/attached file.png"
+            state02=0;
+            cnt--;
+        }
+        msg_Correct();
+    }
+
+    function msg_Correct(){
+
+        var cnt_msg = "현재 찾은 정답의 수 : <font color='red'>" + cnt + "</font>개"
+        document.all.CorrectCnt.innerHTML = cnt_msg;
+    }
+
+    var SetTime = 30;
+
+    function msg_time() {
+            
+        m = Math.floor(SetTime % 60) + "초";
+            
+        var msg = "현재 남은 시간은 <font color='red'>" + m + "</font> 입니다.";
+            
+        document.all.ViewTimer.innerHTML = msg; 
+                    
+        SetTime--;
+
+            if(cnt==2){
+            clearInterval(tid);
+            alert("정답을 모두 찾으셨습니다!\n해설 페이지로 넘어갑니다!");
+            location.href="ransomware_explanation.html";
+            }
+            
+            if (SetTime < 0) {
+                clearInterval(tid);
+                alert("시간을 초과하셨습니다.\n해설 페이지로 넘어갑니다!");
+                location.href="ransomware_explanation.html";
+            }
+            
+        }
+
+        window.onload = function TimerStart(){ tid=setInterval('msg_time()',1000) }
+</script>
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<button id="button_left" onclick="location.href='ransomware_game1.html'">&nbsp;이전으로&nbsp;</button>
+
+	<button id="button_right" onclick="location.href='ransomware_explanation.html'">&nbsp;다음으로&nbsp;</button>
+
+	<br/>
+</article>
+
+
+<footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+
+</body>
+</html>

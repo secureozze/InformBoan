@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>APT</title>
+
+    <link rel="stylesheet" type="text/css" href="common.css"/>
+    <link rel="stylesheet" type="text/css" href="APT.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+      .footer {height: 10vh}
+    body {font-family: 'Nanum Myeongjo', serif;
+font-family: 'Do Hyeon', sans-serif; }
+
+    </style>
+</head>
+<body>
+
+  <header>
+  <div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="./main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="./main_APT.html">APT</a></li>
+                        <li><a href="../ransomware/main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="../pharming/main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="../jungtongbup/jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="../jungtongbup/jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="../iprs/iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+<article class="content">
+   <h3>APT(Advanced Persistent Threat) 공격의 정의</h3>
+
+	 <br/>
+<p>- 특정 대상에 대한 정보를 다양한 방법을 동원해 수집하고<br/>
+   - 향후 원하는 시기에 원하는 만큼의 정보를 유출할 수 있도록<br/>
+   - 장기간 접근을 유지하는 공격 기법</p><br/>
+   <img id="image" src="images/APT1.png" alt="기존 공격과 APT 공격의 차이"><br/>
+   <br/>
+
+
+   <h3>APT 공격 동향</h3>
+   <br/>
+<p>- 인터넷 인프라 발전으로 인터넷을 통한 악성코드 공격 급증<br/>
+   - 사회공학적기법, 고도의 심리전으로 발전 <br/>
+   - 산업과 국가 기간 시설 공격 시도 증가<br/>
+   - 비실행형 악성코드 활용<br/>
+   - 전자서명을 도용한 악성코드 증가<br/>
+   - 최근악성코드는보안솔루션탐지회피기술사용<br/></p>
+   <br/><br/>
+
+
+    <h3>APT 공격 방식</h3>
+    <br/>
+<p>- 사회공학적 기법을 사용한 공격, 시스템 취약점 공격, 저장매체를 통한 공격<br/>
+   - 공격 후 악성코드에 감염시킨 후 정보수집<br/>
+   - C&C서버를 통해 시스템 통제<br/>
+   - 피해자 시스템에 연결된 네트워크 내의 다른 시스템 감염<br/>
+   - 추가 감염된 시스템 C&C 서버 접속해 정보 수집<br/></p>
+   <br/><br/>
+
+    <h3>APT 공격 절차</h3>
+   <img id="image" src="images/APT2.png" alt="APT 공격 절차">
+   <br/><br/>
+
+
+    <h3>APT 공격 특징</h3>
+    <br/>
+<p>- 실행파일(exe)외 문서 형태의 악성코드를 활용한 공격 증가 <br/>
+   - 공격에 사용되는 기술을 특정할 수 없어서 탐지 어려움 <br/>
+   √ 백신에 탐지되지 않는 파턴을 가진 악성코드<br/> 
+   √ 제로데이 취약점<br/>
+   √ 공격 대상에 대한 충분한 정보 수집 및 사회 공학적 기법 사용<br/> 
+   -  APT 공격대응 <br/>
+   √ 100% 예방불가능<br/>
+   √ 취약점 보완, 보안 솔루션 활용 모니터링, 직원 대상 보안 교육<br/></p>
+</ol>
+<br/>
+<strong id="button_right">&nbsp; <- 다 읽었으면 &nbsp;</strong>
+<button id="button_right" onclick="location.href='APT_game1.html'">&nbsp;게임하기&nbsp;</button><br/><br/><br/>
+</article>
+
+
+
+<footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+</body>
+</html>

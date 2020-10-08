@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+<head>
+
+	<title>파밍 게임 결과</title>
+
+	<link rel="stylesheet" type="text/css" href="common.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+	<style type ="Text/css">
+		.bold {font-weight:bold;}
+		#button_left {float: left; bottom:120px;}
+    body {font-family: 'Nanum Myeongjo', serif;
+font-family: 'Do Hyeon', sans-serif;}
+.content{height:80vh;}
+	</style>
+</head>
+
+
+
+
+<BODY>
+<header>
+ 	<div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="../apt/main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="../apt/main_APT.html">APT</a></li>
+                        <li><a href="../ransomware/main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="./main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="../jungtongbup/jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="../jungtongbup/jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="../iprs/iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+<article class="content">
+<h3>파밍으로 인한 전자금융사기를 피했습니다!</h3><br>
+
+	<p>본 예제는 앞서 배운 파밍의 유형중 가짜 은행사이트에 해당한다.<br>
+	악성프로그램에 감염된 피해자PC를 가짜 은행사이트로 접속시키고, 보안 강화를 이유로 보안카드번호 전체를 입력하도록 유도하는 것이다.</p><br>
+
+<ul>
+	<li class="bold">정상사이트와 피싱사이트 비교</li>
+	
+	<table class="table">
+	<tr>
+		<td><img src="images/normal_site.png" alt="정상사이트" height="300px" width="500"></td> <td><img src="images/phishing_site.png" alt="피싱사이트" height="300px" width="500px"></td>
+	</tr>
+
+	<tr>
+		<td>정상사이트</td> <td>피싱사이트</td>
+	</tr>
+	</table><br>
+
+	<p>정상사이트와 피싱사이트를 구분하는것은 쉽지 않다.
+		피싱사이트는 정상사이트의 디자인은 물론이고 주소까지 완벽히 구현해놓았기 때문이다.<br>
+		그렇기때문에 만약 보안 강화를 이유로 금융정보 입력을 요구하는 창이 있다면 피싱사이트로 의심해야하며, 절대 개인정보를 입력해서는 안된다.</p><BR><BR>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+	<button id="button_right" onclick="location.href='../jungtongbup/jungtongbup.html'">&nbsp;정보통신망법 공부하기&nbsp;</button><br/>
+</article>
+
+
+<footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+</BODY>
+</html>

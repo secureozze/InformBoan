@@ -1,0 +1,14 @@
+body h3 {text-align: center}
+body h4 {margin-left:120px;}
+p {margin-left:150px; margin-right: 150px}
+table {margin-left:auto;margin-right:auto;}
+article ul {margin-left:150px; margin-right: 150px}
+article li {line-height: 35px;}
+
+#image {margin-left: auto; margin-right: auto; display: block; text-align: center;}
+
+.table {border-collapse: collapse; width:900px;background:white;}
+.table .left {width:130px; text-align:center; background:skyblue;}
+.table .top {background:silver}
+.bold {font-weight:bold;}
+#footnote {font-size:8pt;}	

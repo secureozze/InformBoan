@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정보통신망법 GAME</title>
+	
+    
+    <link rel="stylesheet" type="text/css" href="common.css"/>
+    <link rel="stylesheet" type="text/css" href="jungtongbup_game.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <style type ="Text/css">
+body {font-family: 'Nanum Myeongjo', serif;
+font-family: 'Do Hyeon', sans-serif;}
+</style>
+    
+</head>
+<body>
+
+ <header>
+    <div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="../apt/main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="../apt/main_APT.html">APT</a></li>
+                        <li><a href="../ransomware/main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="../pharming/main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="./jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="./jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="../iprs/iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <article class="content">
+        
+	<h3>도용한 사람을 무슨 죄로 고소할 수 있을까요?<br/>고소장을 경찰서로 드래그하여 제출하세요.</h3>
+
+	<br/><br/>
+	
+	<h4 id="center">경찰서</h4>
+
+    <img id = "image_police" src = "images/police.png" width="300" draggable="false">
+
+     <div id="police"><strong>여기에 제출하세요</strong><br/><br/></div>
+
+    <div id="sue">
+        <img id = "1" src = "images/choice1.png" width="180" hspace = 20 draggable="true">
+        <img id = "2" src = "images/choice2.png" width="180" hspace = 20 draggable="true">
+        <img id = "3" src = "images/choice3.png" width="180" hspace = 20 draggable="true"> 
+    </div><br/><br/><br/><br/>
+
+        <button id="button_left" onclick="location.href='jungtongbup_game08.html'">&nbsp;이전으로&nbsp;</button>
+
+		<button id="button_right" onclick="location.href='../personalbup/personalbup.html'">&nbsp;개인정보보호법 배우기&nbsp;</button>
+
+    <br/><br/><br/>
+
+    </article>
+    
+    <footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+
+    <script type="text/javascript">
+    var src = document.getElementById("sue"),
+        srcId,
+        target = document.getElementById("police");
+
+    src.ondragstart = function(e){
+        srcId = e.target.id;
+        e.dataTransfer.setData("text", srcId);
+    }
+    target.ondragenter = function(e){
+        dropId = e.target.id;
+    }
+    target.ondragover = function(e){
+        e.preventDefault();
+    }
+    target.ondrop = function(e){
+        var data = e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(data));
+        if(data=="1"){    
+        alert("고소장을 무사히 제출했습니다!\n다음으로 넘어가서 다른 문제도 풀어보세요!");
+        }
+        else{
+            alert("다시 풀어보세요");
+            location.href="jungtongbup_game09.html";
+        }
+    }
+    </script>
+	
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+<head>
+
+    <title>APT 문제</title>
+
+    <link rel="stylesheet" type="text/css" href="common.css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <style type="text/css">
+    article {height: 82vh}
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+    <div id="container">
+
+
+    <header>
+    <div class="wrapper">
+    <h1><a href="../index.html"><img src="images/shield.png" width="30px"> 생생보안정보통</a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropbtn"><a href="../introduction/introduction.html">소개</a></li> 
+        <li class="dropbtn"><a href="./main_APT.html">보안</a>
+                    <ul>
+                        <li><a href="./main_APT.html">APT</a></li>
+                        <li><a href="../ransomware/main_ransomware.html">랜섬웨어</a></li>
+                        <li><a href="../phishing/main_Phishing.html">피싱</a></li>
+                        <li><a href="../pharming/main_pharming.html">파밍</a></li>
+                    </ul>
+                    </li>
+        <li class="dropbtn"><a href="../jungtongbup/jungtongbup.html">법률</a>
+                    <ul>
+                        <li><a href="../jungtongbup/jungtongbup.html">정보통신망법</a></li>
+                        <li><a href="../personalbup/personalbup.html">개인정보보호법</a></li>
+                        <li><a href="../iprs/iprs.html">지식재산권</a></li>
+                    </ul>
+                    </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+<article class="content">
+<h3>컴퓨터가 APT 공격으로 인한 악성코드에 감염된 뒤 
+<br/>이러한 상황을 막기위해 보안위협에 대해 공부해보았다.
+<br/>그렇다면 문제를 풀어볼까?</h3><br/>
+<ul>
+	<li><p>다음 중 APT공격에 대한 설명 중 옳지 않은 것은?</p></li> 
+
+
+    <br/>
+
+    <div id="ViewTimer"></div>
+
+    <br/>
+
+    <form name="test">
+        <label for="1"><input type="radio" name="exam" id="1" value="1" onClick="result()">APT공격 해커들은 주로 악성코드가 담긴 한글파일을 업무적인 메일이나 공문처럼 만들어 메일에 첨부해 공격대상에게 보낸다.</label><br>
+        <label for="2"><input type="radio" name="exam" id="2" value="2" onClick="result()">APT공격을 예방하기 위해서는 한글파일을 지속적으로 업데이트하고 정품을 사용해야 한다.</label><br>
+        <label for="3"><input type="radio" name="exam" id="3" value="3" onClick="result()">APT공격은 기존 공격과는 달리 단기적인 공격이다.</label><br>
+        <label for="4"><input type="radio" name="exam" id="4" value="4" onClick="result()">APT공격은 공격 후 악성코드에 감염시킨 후 정보를 수집한다.</label><br>
+    </form>
+
+    <br/><br/><br/><br/>
+
+
+    
+<br/>
+<br/>
+<button id="button_left" onclick="location.href='APT_game2.html'">&nbsp;이전으로&nbsp;</button>
+
+</article>
+
+
+
+
+
+<footer>  
+   <div id="copyright">
+       Copyright (c) 2019 생생보안정보통 All rights reserved<br/>
+       <a href="http://www.sungshin.ac.kr/sec/" target="_blank">
+           <img src="images/sswu.png" height="55" alt="융합보안공학과">
+       </a>
+       <a href="https://www.kipo.go.kr/kpo/MainApp" target="_blank">
+           <img src="images/patent.png" height="45" alt="특허청">
+       </a>
+       <a href="https://www.police.go.kr/main.html" target="_blank">
+           <img src="images/police mark.png" height="50" alt="경찰청">
+       </a>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+        function result(){
+            if(document.test.exam[0].checked==true){
+                alert("과연 정답일까요?\n정답을 확인하고싶다면 확인버튼을 눌러주세요.");
+                location.href="APT_wrong1.html";
+
+
+            }
+            if(document.test.exam[1].checked==true){
+                alert("과연 정답일까요?\n정답을 확인하고싶다면 확인버튼을 눌러주세요.");
+                location.href="APT_wrong2.html";
+
+
+            }
+            if(document.test.exam[2].checked==true){
+                alert("과연 정답일까요?\n정답을 확인하고싶다면 확인버튼을 눌러주세요.");
+                location.href="APT_correct.html";
+
+
+            }
+            if(document.test.exam[3].checked==true){
+                alert("과연 정답일까요?\n정답을 확인하고싶다면 확인버튼을 눌러주세요.");
+                location.href="APT_wrong3.html";
+            }
+        }
+
+        var SetTime = 25;
+
+        function msg_time() {
+            
+            m = Math.floor(SetTime % 60) + "초";
+            
+            var msg = "현재 남은 시간은 <font color='red'>" + m + "</font> 입니다.";
+            
+            document.all.ViewTimer.innerHTML = msg; 
+                    
+            SetTime--;
+
+            if(document.test.exam[2].checked==true){
+                clearInterval(tid);
+            }
+            
+            if (SetTime < 0) {
+                
+                clearInterval(tid);
+                alert("시간을 초과하셨습니다.\n다시 풀어보세요!");
+                location.href="APT_question.html";
+            }
+            
+        }
+
+        window.onload = function TimerStart(){ tid=setInterval('msg_time()',1000) }
+
+    </script>
+
+
+</body>
+</html>
