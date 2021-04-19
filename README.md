@@ -1,7 +1,7 @@
 # InformBoan
 
 <p align="center">
-  <img src="https://i.esdrop.com/d/4HkGffyomj.png"><img src="https://i.esdrop.com/d/BqOYSe2lZA.jpg">
+<img src="https://i.esdrop.com/d/4HkGffyomj.png"><img src="https://i.esdrop.com/d/BqOYSe2lZA.jpg">
 <p>
 
 
